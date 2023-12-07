@@ -1,0 +1,8 @@
+enum AppReducerBuilder {
+    
+    static var reducer: AppReducer {
+        
+        let videoSettingsReducer = VideoSettingsReducer()
+        let maskReducer = MaskSettingsReducer()
+        let mediaReducer = MediaReducer(videoSettingsReducer: videoSettingsReducer,
+                                        maskSettingsReducer: maskReducer)
